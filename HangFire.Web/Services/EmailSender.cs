@@ -16,9 +16,9 @@ namespace HangFire.Web.Services
         {
             var apiKey = _configuration.GetSection("APIs")["SendGridApi"];
             var client = new SendGridClient(apiKey);
-            var from = new EmailAddress("uyeliklerr93@gmail.com", "Example User");
+            var from = new EmailAddress("******", "Example User");
             var subject = "www.mysite.com bilgilendirme";
-            var to = new EmailAddress("uyeliklerr93@gmail.com", "Example User");
+            var to = new EmailAddress("(******,", "Example User");
             //var plainTextContent = "and easy to do anywhere, even with C#";
             var htmlContent = "<strong>Site kuralları</strong>";
             var msg = MailHelper.CreateSingleEmail(from, to, subject, null, htmlContent);
